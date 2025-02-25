@@ -30,15 +30,13 @@ Clone this repository to your local machine:
 
 #### Step 2: Install Dependencies
 
-Install the required Python libraries:
-
-    pip install -r requirements.txt
+Install the required Python libraries.
 
 #### Step 3: Run the Script
 
 Execute the script using Python:
 
-    python scrape.py
+    python file_name.py
 
 #### Step 4: View the Output
 
@@ -58,27 +56,92 @@ The scraped data will be saved in a file named products.json in the project dire
 
     *Solution*: Use Selenium to render the JavaScript and extract the data.
 
-3. Rate Limiting:
+3. Content Extraction:
 
-   Websites may block IP addresses that send too many requests in a short time.
+   Different pages may take different times to load content, because of varying amount of data.
 
-   *Solution*: Add delays between requests using time.sleep().
+   *Solution*: Instead of iterating through categories, making individual json files and finally combining them.
 
-4. Inconsistent HTML Structure:
+4. Errors encountered:
 
-   Some websites have inconsistent HTML structures, making it difficult to locate elements.
+   As I was making use of Google Colab to run my code, inconsistent errors were occuring.
 
-   *Solution*: Use flexible selectors and error handling to handle edge cases.
+   *Solution*: Loading categories individually and storing data in separate json files.
 
 ### Sample Output
 
 Here are the first 5 products scraped by the script:
 
--- the different categories were either not loading or taking too long to load
-  Possible causes --> Different amounts of data loading on different pages
-  solution --> had to load each category separately
-
--- some links were not working and throwing errors
-
--- Stored data of a particular category in a corresponding json file.
--- Then combine them all to one file.
+            [
+                {
+                    "Category": "OTOP",
+                    "Quantity": "30g",
+                    "Product Name": "Doikham Savoury Strawberry",
+                    "Product Images": "https://assets.tops.co.th/DOIKHAM-DoikhamSavouryStrawberry30g-8850773551115-1?$JPEG$",
+                    "Barcode Number": "8850773551115",
+                    "Price": "30 Baht",
+                    "Labels": [
+                        "Snacks & Desserts",
+                        "Nuts & Dried Fruit",
+                        "Dried Fruit"
+                    ],
+                    "Product Details": "The product received may be subject to package modification and quantity from the manufacturer."
+                },
+                {
+                    "Category": "OTOP",
+                    "Quantity": "140g",
+                    "Product Name": "Doikham Dried",
+                    "Product Images": "https://assets.tops.co.th/DOIKHAM-DoikhamDriedMango140g-8850773550262-1?$JPEG$",
+                    "Barcode Number": "8850773550262",
+                    "Price": "80 Baht",
+                    "Labels": [
+                        "Shop by Brands",
+                        "I LOVE THAILAND",
+                        "Thai Dried Fruits & Thai Snacks"
+                    ],
+                    "Product Details": "The product received may be subject to package modification and quantity from the manufacturer."
+                },
+                {
+                    "Category": "OTOP",
+                    "Quantity": "140g",
+                    "Product Name": "Doikham Dried Strawberry",
+                    "Product Images": "https://assets.tops.co.th/DOIKHAM-DoikhamDriedStrawberry140g-8850773550279-1?$JPEG$",
+                    "Barcode Number": "8850773550279",
+                    "Price": "155 Baht",
+                    "Labels": [
+                        "Shop by Brands",
+                        "I LOVE THAILAND",
+                        "Thai Dried Fruits & Thai Snacks"
+                    ],
+                    "Product Details": "The product received may be subject to package modification and quantity from the manufacturer."
+                },
+                {
+                    "Category": "OTOP",
+                    "Quantity": "15g",
+                    "Product Name": "Sweet Milk Tablets",
+                    "Product Images": "https://assets.tops.co.th/LALAFARM-LalafarmSweetMilkTablets15g-8857124514072-1?$JPEG$",
+                    "Barcode Number": "8857124514072",
+                    "Price": "10 Baht",
+                    "Labels": [
+                        "Shop by Brands",
+                        "I LOVE THAILAND",
+                        "Thai Dried Fruits & Thai Snacks"
+                    ],
+                    "Product Details": "The owner has experience in producing dairy products for various brands in Thailand.He used premium imported full-fat milk powder, making them nutrient-rich snacks just like drinking a whole glass of milk."
+                },
+                {
+                    "Category": "OTOP",
+                    "Quantity": "25g",
+                    "Product Name": "Doikham Dehydrated Chewy Tasty Mulberry",
+                    "Product Images": "https://assets.tops.co.th/DOIKHAM-DoikhamDehydratedChewyTastyMulberry25g-8850773550750-1?$JPEG$",
+                    "Barcode Number": "8850773550750",
+                    "Price": "25 Baht",
+                    "Labels": [
+                        "Healthiful",
+                        "Alternative Healthy Lifestyle",
+                        "Vegan"
+                    ],
+                    "Product Details": "The product received may be subject to package modification and quantity from the manufacturer."
+                }
+            ]
+ 
