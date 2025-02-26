@@ -144,4 +144,10 @@ Here are the first 5 products scraped by the script:
                     "Product Details": "The product received may be subject to package modification and quantity from the manufacturer."
                 }
             ]
- 
+
+ #### Assumptions
+
+- Missing fields: For some products, either quantity is not given or description is not there. They have been handled as empty strings in the code so that they can be modified later.
+- The barcode number from SKU is not handled as I don't have experience in this. So I stored the SKU as Barcode number.
+
+#### Please let me know if any improvements or modifications are required, will be happy to accomodate them!
