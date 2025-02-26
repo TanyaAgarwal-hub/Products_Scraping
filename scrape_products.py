@@ -177,110 +177,98 @@ def get_product_details(product_data, product_details, SKU, category):
 
 
 SKU = []
-
 product_details = []
 
+# Get product details of Category='OTOP'
 link_categories = get_category_links(OTOP_link)
-
 data_products = get_products_data(link_categories, [])
 product_details = get_product_details_OTOP(data_products, [], SKU)
 
 with open("product_data_OTOP.json","w") as json_file:
   json.dump(product_details, json_file, indent=4)
 
+# Get product details of Category='Only At Tops'
 link_categories = get_category_links(links['Only At Tops'])
-product_details = []
-
 data_products = get_products_data(link_categories, [])
 product_details = get_product_details(data_products, [], SKU, 'Only At Tops')
 
 with open("product_data_OnlyAtTops.json","w") as json_file:
   json.dump(product_details, json_file, indent=4)
 
+# Get product details of Category='Fruits & Vegetables'
 link_categories = get_category_links(links['Fruits & Vegetables'])
-product_details = []
-
 data_products = get_products_data(link_categories, [])
 product_details = get_product_details(data_products, [], SKU, 'Fruits & Vegetables')
 
 with open("product_data_FruitsVegetables.json","w") as json_file:
   json.dump(product_details, json_file, indent=4)
 
+# Get product details of Category='Meat & Seafood'
 link_categories = get_category_links(links['Meat & Seafood'])
-product_details = []
-
 data_products = get_products_data(link_categories, [])
 product_details = get_product_details(data_products, [], SKU, 'Meat & Seafood')
 
 with open("product_data_MeatSeafood.json","w") as json_file:
   json.dump(product_details, json_file, indent=4)
 
+# Get product details of Category='Fresh Food & Bakery'
 link_categories = get_category_links(links['Fresh Food & Bakery'])
-product_details = []
-
 data_products = get_products_data(link_categories, [])
 product_details = get_product_details(data_products, [], SKU, 'Fresh Food & Bakery')
 
 with open("product_data_FreshFoodBakery.json","w") as json_file:
   json.dump(product_details, json_file, indent=4)
 
+# Get product details of Category='Pantry & Ingredients'
 link_categories = get_category_links(links['Pantry & Ingredients'])
-product_details = []
-
 data_products = get_products_data(link_categories, [])
 product_details = get_product_details(data_products, [], SKU, 'Pantry & Ingredients')
 
 with open("product_data_PantryIngredients.json","w") as json_file:
   json.dump(product_details, json_file, indent=4)
 
+# Get product details of Category='Snacks & Desserts'
 link_categories = get_category_links(links['Snacks & Desserts'])
-product_details = []
-
 data_products = get_products_data(link_categories, [])
 product_details = get_product_details(data_products, [], SKU, 'Snacks & Desserts')
 
 with open("product_data_SnacksDesserts.json","w") as json_file:
   json.dump(product_details, json_file, indent=4)
 
+# Get product details of Category='Beverages'
 link_categories = get_category_links(links['Beverages'])
-product_details = []
-
 data_products = get_products_data(link_categories, [])
 product_details = get_product_details(data_products, [], SKU, 'Beverages')
 
 with open("product_data_Beverages.json","w") as json_file:
   json.dump(product_details, json_file, indent=4)
 
+# Get product details of Category='Health & Beauty Care'
 link_categories = get_category_links(links['Health & Beauty Care'])
-product_details = []
-
 data_products = get_products_data(link_categories, [])
 product_details = get_product_details(data_products, [], SKU, 'Health & Beauty Care')
 
 with open("product_data_HealthBeautyCare.json","w") as json_file:
   json.dump(product_details, json_file, indent=4)
 
+# Get product details of Category='Mom & Kids'
 link_categories = get_category_links(links['Mom & Kids'])
-product_details = []
-
 data_products = get_products_data(link_categories, [])
 product_details = get_product_details(data_products, [], SKU, 'Mom & Kids')
 
 with open("product_data_MomKids.json","w") as json_file:
   json.dump(product_details, json_file, indent=4)
 
+# Get product details of Category='Household & Merit'
 link_categories = get_category_links(links['Household & Merit'])
-product_details = []
-
 data_products = get_products_data(link_categories, [])
 product_details = get_product_details(data_products, [], SKU, 'Household & Merit')
 
 with open("product_data_HouseholdMerit.json","w") as json_file:
   json.dump(product_details, json_file, indent=4)
 
+# Get product details of Category='PetNme'
 link_categories = get_category_links(links['PetNme'])
-product_details = []
-
 data_products = get_products_data(link_categories, [])
 product_details = get_product_details(data_products, [], SKU, 'PetNme')
 
